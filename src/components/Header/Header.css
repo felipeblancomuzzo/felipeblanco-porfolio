@@ -33,6 +33,15 @@
   cursor: pointer;
 }
 
+.header nav div.active {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.header-logo {
+  cursor: pointer;
+}
+
 /* logo */
 .header nav div img {
   width: 3rem;

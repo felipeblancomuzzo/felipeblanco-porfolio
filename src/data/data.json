@@ -1,0 +1,60 @@
+{
+  "projects": [
+    {
+      "id": "el-almacen",
+      "title": "El Almacén Vinos & Delicatessen",
+      "description": "App de pedidos mobile-first para un almacén gourmet. Catálogo con variantes de precio, carrito, y despacho del pedido directo por WhatsApp.",
+      "tags": ["React", "Vite", "Tailwind CSS"],
+      "demoUrl": "",
+      "repoUrl": "",
+      "featured": true,
+      "hasImage": false
+    },
+    {
+      "id": "proyecto-2",
+      "title": "Lorem ipsum dolor sit amet",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": ["React", "Node.js"],
+      "demoUrl": "",
+      "repoUrl": "",
+      "featured": false,
+      "hasImage": false
+    },
+    {
+      "id": "proyecto-3",
+      "title": "Consectetur adipiscing elit",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "tags": ["JavaScript", "MySQL"],
+      "demoUrl": "",
+      "repoUrl": "",
+      "featured": false,
+      "hasImage": false
+    }
+  ],
+  "experience": [
+    {
+      "id": "jala",
+      "type": "Estudio",
+      "title": "Ingeniería de Software",
+      "place": "Jala University",
+      "period": "En curso",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore."
+    },
+    {
+      "id": "freelance",
+      "type": "Trabajo",
+      "title": "Desarrollador freelance",
+      "place": "Proyectos propios / clientes locales",
+      "period": "Actualidad",
+      "description": "Desarrollo de aplicaciones web a medida para comercios locales, como El Almacén Vinos & Delicatessen."
+    },
+    {
+      "id": "placeholder-1",
+      "type": "Estudio",
+      "title": "Lorem ipsum curso o certificación",
+      "place": "Institución",
+      "period": "20XX",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  ]
+}

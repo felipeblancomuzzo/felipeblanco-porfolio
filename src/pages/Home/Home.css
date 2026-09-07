@@ -3,3 +3,23 @@
     flex-direction: column;
     align-items: center;
 }
+
+.home-featured-project {
+    width: 100%;
+    padding: 4rem 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.home-featured-project h2 {
+    font-size: 3.2rem;
+    line-height: 0.95;
+    margin-bottom: 2rem;
+}
+
+.home-featured-project-card {
+    width: 100%;
+    max-width: 32rem;
+    margin-bottom: 2.5rem;
+}

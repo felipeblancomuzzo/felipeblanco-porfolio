@@ -67,3 +67,22 @@ img {
 ul li {
   display: inline;
 }
+
+/* === Estilos compartidos entre páginas internas === */
+.page-header {
+    padding: 4rem 10% 2.5rem;
+    border-bottom: 4px solid var(--black);
+}
+
+.page-header h1 {
+    font-size: 6rem;
+    line-height: 0.85;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.4rem;
+    font-weight: normal;
+    max-width: 40rem;
+    line-height: 1.4;
+}
