@@ -1,0 +1,42 @@
+.introduction {
+    display: flex;
+    justify-content: space-between; /* Distribuye espacio entre los divs */
+    align-items: center; /* Centra verticalmente los divs */
+    height: 82dvh;
+    width: 100%;
+    border-bottom: 4px solid var(--black);
+    padding: 0 10%; /* Añade padding horizontal para separar de bordes */
+}
+
+.introduction div {
+    width: 80%; /* Ancho definido para cada columna */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    justify-content: center; /* Centra verticalmente el contenido */
+}
+
+.introduction div:first-child {
+    padding-right: 2rem; /* Espacio entre texto e imagen */
+}
+
+.introduction div h1,
+.introduction div p {
+    text-align: left; /* Alinea texto a la izquierda */
+    width: 100%;
+    margin: 0.5rem 0; /* Ajusta márgenes verticales */
+}
+
+.introduction div h1 {
+    font-size: 9rem;
+    line-height: .8;
+    user-select: none;
+}
+
+.introduction div p {
+    font-size: 2.5rem;
+    margin-top: 1.2rem;
+}
+.intro-button {
+    margin-top: 2rem;
+}
