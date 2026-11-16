@@ -18,9 +18,11 @@
     margin-bottom: 2rem;
 }
 
-.home-featured-project-card {
+.home-featured-grid {
     width: 100%;
-    max-width: 32rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+    gap: 2rem;
     margin-bottom: 2.5rem;
 }
 

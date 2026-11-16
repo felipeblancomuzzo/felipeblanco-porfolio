@@ -19,21 +19,69 @@
   }
 }
 
-.project-card.featured {
-  background: var(--grey);
-}
-
-.project-card.featured .project-tags li:first-child {
+.project-tags li:first-child {
   background: var(--accent);
 }
 
-.project-image {
+.project-stage {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 120%, var(--accent) 0 38%, transparent 38.5%),
+    var(--grey);
+  border-bottom: 4px solid var(--black);
+}
+
+/* Captura dentro de un marco de celular que asoma desde abajo */
+.project-phone {
+  position: absolute;
+  left: 50%;
+  top: 12%;
+  width: 46%;
+  translate: -50% 0;
+  aspect-ratio: 9 / 18;
+  border: 4px solid var(--black);
+  border-radius: 1.6rem;
+  background: var(--black);
+  padding: 5px;
+  box-shadow: 6px 6px 0 var(--black);
+  transition: transform 300ms var(--ease-out);
+}
+
+.project-phone img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 100%;
   object-fit: cover;
   object-position: top;
-  border-bottom: 4px solid var(--black);
+  border-radius: 1.15rem;
+}
+
+.project-label {
+  position: absolute;
+  z-index: 1;
+  top: 0.9rem;
+  left: 0.9rem;
+  background: var(--white);
+  border: 2px solid var(--black);
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .project-phone {
+    transform: translateY(-4%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-phone {
+    transition: none;
+  }
 }
 
 .project-image-placeholder {
