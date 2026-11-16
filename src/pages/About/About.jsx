@@ -6,8 +6,8 @@ const About = () => {
       <header className="page-header">
         <h1>Sobre mí.</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Desarrollador web en Coronel Suárez. Hago que los comercios vendan
+          y se organicen mejor con apps simples, rápidas y pensadas para el celular.
         </p>
       </header>
 
@@ -15,16 +15,17 @@ const About = () => {
         <div className="about-text">
           <h2>Quién soy</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore.
+            Soy Felipe. Me gusta construir cosas que la gente usa todos los
+            días: un catálogo donde pedir en dos toques, un panel que ordena
+            los clientes de un negocio, una herramienta que ahorra llamadas y
+            planillas. Trabajo de cerca con cada comercio, entiendo cómo vende
+            hoy y armo la solución a su medida.
           </p>
           <p>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum. Actualmente estudio
-            Ingeniería de Software en Jala University, y en paralelo trabajo
-            como desarrollador freelance para comercios locales.
+            Estudio Ingeniería de Software en Jala University y, en paralelo,
+            trabajo como desarrollador freelance para comercios locales. Mi
+            primer cliente fue El Almacén Vinos &amp; Delicatessen, que hoy
+            recibe pedidos desde su propia app.
           </p>
         </div>
 

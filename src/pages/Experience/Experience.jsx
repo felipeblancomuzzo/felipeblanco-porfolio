@@ -7,8 +7,8 @@ const Experience = () => {
       <header className="page-header">
         <h1>Experiencia.</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Un
-          recorrido corto por mi formación y mi camino laboral.
+          Un recorrido corto por mi formación y mi camino laboral: lo que
+          estudio y lo que ya construí para clientes reales.
         </p>
       </header>
 
