@@ -7,8 +7,8 @@ const Introduction = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='introduction'>
-      <div>
+    <section className='introduction'>
+      <div className='intro-text'>
         <h1>Hola. <br /> Yo soy Felipe.</h1>
         <p>
           Creo apps de pedidos y sistemas de gestión para comercios.
@@ -21,10 +21,10 @@ const Introduction = () => {
           <Button onClick={() => navigate('/contact')} text="Hablemos" className="button-secondary" />
         </div>
       </div>
-      <div>
+      <div className='intro-visual'>
         <img src={Working} alt="Ilustración de Felipe trabajando" />
       </div>
-    </div>
+    </section>
   );
 };
 

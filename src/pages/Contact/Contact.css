@@ -1,7 +1,7 @@
 .contact-content {
   display: flex;
   gap: 3rem;
-  padding: 3rem 10% 4rem;
+  padding: 3rem var(--page-x) 4rem;
 }
 
 .contact-form {
