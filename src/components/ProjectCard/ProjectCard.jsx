@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
+import { ArrowUpRight, CodeXml } from "lucide-react";
 import "./ProjectCard.css";
 
-const ProjectCard = ({ title, description, tags, demoUrl, repoUrl, featured, image, label }) => {
+const ProjectCard = ({ title, description, tags, demoUrl, repoUrl, featured, image, label, demoNote }) => {
   return (
     <div className={`project-card ${featured ? "featured" : ""}`}>
       {image ? (
@@ -29,16 +30,22 @@ const ProjectCard = ({ title, description, tags, demoUrl, repoUrl, featured, ima
           </ul>
         )}
 
+        {demoUrl && demoNote && <p className="project-note">{demoNote}</p>}
+
         <div className="project-links">
           {demoUrl ? (
-            <a href={demoUrl} target="_blank" rel="noreferrer">Ver demo</a>
+            <a className="project-visit" href={demoUrl} target="_blank" rel="noreferrer">
+              Visitar el sitio
+              <ArrowUpRight size={20} strokeWidth={2.5} aria-hidden="true" />
+            </a>
           ) : (
-            <span className="project-link-disabled">Demo próximamente</span>
+            <span className="project-link-disabled">Próximamente online</span>
           )}
-          {repoUrl ? (
-            <a href={repoUrl} target="_blank" rel="noreferrer">Repositorio</a>
-          ) : (
-            <span className="project-link-disabled">Repo privado</span>
+          {repoUrl && (
+            <a className="project-repo" href={repoUrl} target="_blank" rel="noreferrer">
+              <CodeXml size={18} strokeWidth={2.5} aria-hidden="true" />
+              Código
+            </a>
           )}
         </div>
       </div>
@@ -55,6 +62,7 @@ ProjectCard.propTypes = {
   featured: PropTypes.bool,
   image: PropTypes.string,
   label: PropTypes.string,
+  demoNote: PropTypes.string,
 };
 
 export default ProjectCard;
