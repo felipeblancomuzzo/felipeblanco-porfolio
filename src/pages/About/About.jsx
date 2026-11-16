@@ -1,4 +1,5 @@
 import Reveal from "../../components/Reveal/Reveal";
+import Stack from "../../components/Stack/Stack";
 import "./About.css";
 
 const About = () => {
@@ -35,19 +36,7 @@ const About = () => {
         </Reveal>
       </section>
 
-      <section className="about-stack">
-        <Reveal>
-        <h2>Con qué trabajo</h2>
-        <ul className="stack-list">
-          <li>React</li>
-          <li>JavaScript</li>
-          <li>Vite</li>
-          <li>Tailwind CSS</li>
-          <li>Node.js</li>
-          <li>Git</li>
-        </ul>
-        </Reveal>
-      </section>
+      <Stack />
     </div>
   );
 };
