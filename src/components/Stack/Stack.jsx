@@ -62,7 +62,7 @@ const SKILLS = [
 
 const Stack = () => {
   return (
-    <section className="stack">
+    <section className="stack theme-dark">
       <Reveal from="left" className="stack-heading">
         <span className="section-kicker">Stack</span>
         <h2>Con qué trabajo</h2>
@@ -79,7 +79,7 @@ const Stack = () => {
       <div className="stack-groups">
         {GROUPS.map((group, index) => (
           <Reveal key={group.title} delay={index * 90}>
-            <article className="stack-group">
+            <article className="stack-group card-light">
               <h3>{group.title}</h3>
               <p>{group.text}</p>
               <ul className="stack-tools">

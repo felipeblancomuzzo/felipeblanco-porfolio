@@ -26,7 +26,7 @@ const Services = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="services">
+    <section className="services theme-dark">
       <Reveal className="services-heading" from="left">
         <span className="section-kicker">Servicios</span>
         <h2>¿Qué puedo hacer por tu negocio?</h2>
@@ -39,7 +39,7 @@ const Services = () => {
       <div className="services-grid">
         {SERVICES.map(({ icon: Icon, title, text }, index) => (
           <Reveal key={title} delay={index * 90}>
-          <article className="service-card">
+          <article className="service-card card-light">
             <div className="service-card-top">
               <span className="service-icon" aria-hidden="true">
                 <Icon size={30} strokeWidth={2.25} />

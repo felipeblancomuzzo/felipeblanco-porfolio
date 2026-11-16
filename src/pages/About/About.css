@@ -2,8 +2,7 @@
   display: flex;
   align-items: flex-start;
   gap: 3rem;
-  padding: 3rem var(--page-x);
-  border-bottom: 4px solid var(--black);
+  padding: 4rem var(--page-x);
 }
 
 .about-text {

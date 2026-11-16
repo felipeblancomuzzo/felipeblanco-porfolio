@@ -6,7 +6,7 @@
 
 .home-featured-project {
     width: 100%;
-    padding: 4rem var(--page-x);
+    padding: 5rem var(--page-x);
     display: flex;
     flex-direction: column;
     align-items: flex-start;

@@ -50,20 +50,28 @@
   ],
   "experience": [
     {
-      "id": "jala",
-      "type": "Estudio",
-      "title": "Ingeniería de Software",
-      "place": "Jala University",
-      "period": "En curso",
-      "description": "Carrera de grado en desarrollo de software: programación, bases de datos, gestión en la nube y metodologías ágiles, con proyectos prácticos en equipo."
-    },
-    {
       "id": "freelance",
       "type": "Trabajo",
       "title": "Desarrollador freelance",
       "place": "Proyectos propios / clientes locales",
       "period": "Actualidad",
       "description": "Desarrollo de aplicaciones web a medida para comercios locales, como El Almacén Vinos & Delicatessen."
+    },
+    {
+      "id": "inkua",
+      "type": "Voluntariado",
+      "title": "Desarrollador web",
+      "place": "InkuA · ONG",
+      "period": "2023 – 2025",
+      "description": "Trabajé en distintos equipos desarrollando proyectos sin fines de lucro para la ONG. Me sirvió para crecer en desarrollo y, sobre todo, en trabajo en equipo: coordinar tareas, revisar código entre compañeros y entregar en plazos."
+    },
+    {
+      "id": "jala",
+      "type": "Estudio",
+      "title": "Ingeniería de Software",
+      "place": "Jala University",
+      "period": "En curso",
+      "description": "Carrera de grado en desarrollo de software: programación, bases de datos, gestión en la nube y metodologías ágiles, con proyectos prácticos en equipo."
     }
   ]
 }

@@ -1,5 +1,6 @@
 .footer {
   background: var(--black);
+  border-top: 1px solid rgba(240, 240, 240, 0.15);
   padding: 4rem var(--page-x) 2rem;
 }
 
