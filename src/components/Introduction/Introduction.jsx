@@ -30,9 +30,9 @@ const Introduction = () => {
       </div>
 
       {/*
-        Ilustración animada: la misma imagen apilada 3 veces.
-        Las copias de arriba están recortadas con una máscara (cabeza y manos)
-        y se mueven apenas, así parece que piensa y tipea sin perder calidad.
+        Ilustración animada: la misma imagen apilada 2 veces.
+        La copia de arriba está recortada con una máscara (solo la cabeza)
+        y se balancea apenas, como pensando.
       */}
       <div className='intro-visual'>
         <div className='intro-figure'>
@@ -42,7 +42,6 @@ const Introduction = () => {
             alt="Ilustración de Felipe trabajando en su notebook"
           />
           <img className='intro-layer intro-layer-head' src={Working} alt="" aria-hidden="true" />
-          <img className='intro-layer intro-layer-hands' src={Working} alt="" aria-hidden="true" />
 
           {/* Burbuja de ideas */}
           <span className='intro-dot intro-dot-1' aria-hidden="true" />

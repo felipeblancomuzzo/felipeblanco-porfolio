@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { MessageCircle, Mail, CodeXml, Briefcase, ArrowUpRight } from "lucide-react";
 import Button from "../../components/Button/Button";
+import Reveal from "../../components/Reveal/Reveal";
 import "./Contact.css";
 
 // TODO Felipe: reemplazá estos valores con tus datos reales.
@@ -8,6 +10,13 @@ const WHATSAPP_NUMBER = "5491100000000";
 const CONTACT_EMAIL = "tu-email@ejemplo.com";
 const GITHUB_URL = "https://github.com/felipeblancomuzzo";
 const LINKEDIN_URL = "https://www.linkedin.com/in/tu-usuario";
+
+const DIRECT_LINKS = [
+  { label: "WhatsApp", icon: MessageCircle, href: `https://wa.me/${WHATSAPP_NUMBER}`, external: true },
+  { label: "Email", icon: Mail, href: `mailto:${CONTACT_EMAIL}`, external: false },
+  { label: "GitHub", icon: CodeXml, href: GITHUB_URL, external: true },
+  { label: "LinkedIn", icon: Briefcase, href: LINKEDIN_URL, external: true },
+];
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", contact: "", message: "" });
@@ -39,6 +48,7 @@ const Contact = () => {
       </header>
 
       <section className="contact-content">
+        <Reveal className="contact-form-wrap" from="left">
         <form className="contact-form" onSubmit={handleSubmit}>
           <label htmlFor="name">Nombre</label>
           <input
@@ -75,26 +85,28 @@ const Contact = () => {
 
           <Button type="submit" text="Enviar por WhatsApp" />
         </form>
+        </Reveal>
 
-        <div className="contact-direct">
+        <Reveal className="contact-direct" from="right" delay={100}>
           <h2>O escribime directo</h2>
           <ul className="contact-links">
-            <li>
-              <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer">
-                WhatsApp
-              </a>
-            </li>
-            <li>
-              <a href={`mailto:${CONTACT_EMAIL}`}>Email</a>
-            </li>
-            <li>
-              <a href={GITHUB_URL} target="_blank" rel="noreferrer">GitHub</a>
-            </li>
-            <li>
-              <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">LinkedIn</a>
-            </li>
+            {DIRECT_LINKS.map(({ label, icon: Icon, href, external }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noreferrer" : undefined}
+                >
+                  <span className="contact-link-icon" aria-hidden="true">
+                    <Icon size={22} strokeWidth={2.25} />
+                  </span>
+                  {label}
+                  <ArrowUpRight className="contact-link-arrow" size={20} strokeWidth={2.5} aria-hidden="true" />
+                </a>
+              </li>
+            ))}
           </ul>
-        </div>
+        </Reveal>
       </section>
     </div>
   );

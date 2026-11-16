@@ -1,21 +1,23 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 
 const Layout = () => {
-
   const location = useLocation();
+  const appRef = useRef(null);
 
+  // Al cambiar de página, vuelve arriba. El scroll está en .App, no en la ventana.
   useEffect(() => {
-    window.scrollTo(0, 0);
+    appRef.current?.scrollTo(0, 0);
   }, [location.pathname]);
 
   return (
     <div className="background">
-      <div className="App">
+      <div className="App" ref={appRef}>
         <Header />
-        <main>
+        {/* key: al cambiar de ruta se vuelve a montar y corre la animación de entrada */}
+        <main key={location.pathname} className="page-enter">
           <Outlet />
         </main>
         <Footer />

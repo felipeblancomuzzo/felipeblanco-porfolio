@@ -1,10 +1,9 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Introduction from "../../components/Introduction/Introduction";
 import Services from "../../components/Services/Services";
-import Highlights from "../../components/Highlights/Highlights";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import Button from "../../components/Button/Button";
+import Reveal from "../../components/Reveal/Reveal";
 import data from "../../data/data.json";
 import "./Home.css";
 
@@ -13,22 +12,25 @@ const Home = () => {
   const featuredProject = data.projects.find((p) => p.featured);
 
   return (
-    <main className='home-container'>
+    <div className='home-container'>
         <Introduction />
-        <Highlights />
         <Services />
 
         {featuredProject && (
           <section className="home-featured-project">
-            <span className="section-kicker">Portfolio</span>
-            <h2>Un proyecto reciente</h2>
-            <div className="home-featured-project-card">
+            <Reveal from="left">
+              <span className="section-kicker">Portfolio</span>
+              <h2>Un proyecto reciente</h2>
+            </Reveal>
+            <Reveal className="home-featured-project-card" delay={100}>
               <ProjectCard {...featuredProject} />
-            </div>
-            <Button onClick={() => navigate('/projects')} text="Ver todos los proyectos" />
+            </Reveal>
+            <Reveal delay={150}>
+              <Button onClick={() => navigate('/projects')} text="Ver todos los proyectos" />
+            </Reveal>
           </section>
         )}
-    </main>
+    </div>
   )
 }
 

@@ -1,3 +1,4 @@
+import Reveal from "../../components/Reveal/Reveal";
 import data from "../../data/data.json";
 import "./Experience.css";
 
@@ -13,8 +14,8 @@ const Experience = () => {
       </header>
 
       <section className="timeline">
-        {data.experience.map((item) => (
-          <div className="timeline-item" key={item.id}>
+        {data.experience.map((item, index) => (
+          <Reveal className="timeline-item" key={item.id} from="left" delay={index * 90}>
             <div className="timeline-marker">
               <span>{item.type}</span>
             </div>
@@ -26,7 +27,7 @@ const Experience = () => {
               <p className="timeline-place">{item.place}</p>
               <p>{item.description}</p>
             </div>
-          </div>
+          </Reveal>
         ))}
       </section>
     </div>

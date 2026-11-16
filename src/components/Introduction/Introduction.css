@@ -38,7 +38,8 @@
 .intro-text h1 mark {
     color: inherit;
     font: inherit;
-    background: linear-gradient(transparent 68%, var(--accent) 68%, var(--accent) 92%, transparent 92%);
+    background: linear-gradient(transparent 68%, var(--accent) 68%, var(--accent) 92%, transparent 92%) no-repeat left / 0% 100%;
+    animation: marker-draw 700ms var(--ease-in-out) 700ms forwards;
 }
 
 .intro-text p {
@@ -99,32 +100,9 @@
     animation: intro-head 5s ease-in-out infinite alternate;
 }
 
-/* Manos: saltitos cortos, como tipeando, con una pausa. */
-.intro-layer-hands {
-    -webkit-mask-image: radial-gradient(ellipse 9.5% 6% at 42% 75.5%, #000 70%, transparent 100%);
-    mask-image: radial-gradient(ellipse 9.5% 6% at 42% 75.5%, #000 70%, transparent 100%);
-    animation: intro-typing 2.6s steps(1, end) infinite;
-}
-
 @keyframes intro-head {
     from { transform: rotate(-1.4deg); }
     to   { transform: rotate(1.2deg); }
-}
-
-@keyframes intro-typing {
-    0%   { transform: translate(0, 0); }
-    6%   { transform: translate(0, 0.35%); }
-    12%  { transform: translate(-0.2%, 0); }
-    18%  { transform: translate(0.15%, 0.35%); }
-    24%  { transform: translate(0, 0); }
-    30%  { transform: translate(-0.15%, 0.3%); }
-    36%  { transform: translate(0.2%, 0); }
-    42%  { transform: translate(0, 0.35%); }
-    48%  { transform: translate(-0.2%, 0.1%); }
-    54%  { transform: translate(0.1%, 0.35%); }
-    60%  { transform: translate(0, 0); }
-    66%  { transform: translate(0, 0.3%); }
-    72%, 100% { transform: translate(0, 0); }
 }
 
 /* Burbuja de ideas: los íconos se turnan */
@@ -231,7 +209,6 @@
     }
 
     .intro-layer-head,
-    .intro-layer-hands,
     .intro-idea,
     .intro-dot {
         animation: none;
@@ -239,6 +216,11 @@
 
     .intro-idea-icon {
         animation: none;
+    }
+
+    .intro-text h1 mark {
+        animation: none;
+        background-size: 100% 100%;
     }
 
     .intro-idea-icon:first-child {

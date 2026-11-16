@@ -1,4 +1,5 @@
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import Reveal from "../../components/Reveal/Reveal";
 import data from "../../data/data.json";
 import "./Projects.css";
 
@@ -14,8 +15,10 @@ const Projects = () => {
       </header>
 
       <div className="projects-grid">
-        {data.projects.map((project) => (
-          <ProjectCard key={project.id} {...project} />
+        {data.projects.map((project, index) => (
+          <Reveal key={project.id} delay={index * 90}>
+            <ProjectCard {...project} />
+          </Reveal>
         ))}
       </div>
     </div>

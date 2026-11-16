@@ -53,7 +53,8 @@ html {
   height: 100vh;
   max-width: 100%;
   max-height: 100%;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
   overscroll-behavior: contain;
 }
@@ -99,7 +100,8 @@ ul li {
     line-height: 0.85;
     margin-bottom: 1rem;
     /* Subrayado tipo resaltador, igual que en el inicio */
-    background: linear-gradient(transparent 68%, var(--accent) 68%, var(--accent) 92%, transparent 92%);
+    background: linear-gradient(transparent 68%, var(--accent) 68%, var(--accent) 92%, transparent 92%) no-repeat left / 0% 100%;
+    animation: marker-draw 700ms var(--ease-in-out) 250ms forwards;
 }
 
 .page-header p {
@@ -173,4 +175,30 @@ a:focus-visible {
 .contact-links a {
   font-weight: 500;
   letter-spacing: 0;
+}
+
+/* El resaltador amarillo se "dibuja" de izquierda a derecha */
+@keyframes marker-draw {
+  to { background-size: 100% 100%; }
+}
+
+/* Entrada suave al cambiar de página */
+.page-enter {
+  animation: page-enter 350ms var(--ease-out);
+}
+
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(0.75rem); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter {
+    animation: none;
+  }
+
+  .page-header h1 {
+    animation: none;
+    background-size: 100% 100%;
+  }
 }
