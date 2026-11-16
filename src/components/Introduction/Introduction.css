@@ -81,36 +81,34 @@
 .intro-figure {
     position: relative;
     width: 100%;
-    aspect-ratio: 712 / 666;
+    aspect-ratio: 720 / 552;
+    /* Fondo propio: es contra lo que se mezcla el video */
+    background: var(--white);
 }
 
-.intro-layer {
-    position: absolute;
-    inset: 0;
+.intro-video {
+    display: block;
     width: 100%;
     height: 100%;
-    max-width: none;
-}
-
-/* Cabeza: se mueve apenas, como pensando. Gira desde el cuello. */
-.intro-layer-head {
-    -webkit-mask-image: radial-gradient(ellipse 21% 21% at 54% 27%, #000 78%, transparent 100%);
-    mask-image: radial-gradient(ellipse 21% 21% at 54% 27%, #000 78%, transparent 100%);
-    transform-origin: 58% 45%;
-    animation: intro-head 5s ease-in-out infinite alternate;
-}
-
-@keyframes intro-head {
-    from { transform: rotate(-1.4deg); }
-    to   { transform: rotate(1.2deg); }
+    /* El blanco del video se funde con el fondo del sitio */
+    mix-blend-mode: multiply;
+    /* Bordes difuminados, por si queda alguna diferencia mínima de color */
+    -webkit-mask-image:
+        linear-gradient(to right, transparent, #000 4%, #000 96%, transparent),
+        linear-gradient(to bottom, transparent, #000 4%, #000 96%, transparent);
+    mask-image:
+        linear-gradient(to right, transparent, #000 4%, #000 96%, transparent),
+        linear-gradient(to bottom, transparent, #000 4%, #000 96%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
 }
 
 /* Burbuja de ideas: los íconos se turnan */
 .intro-idea {
     position: absolute;
-    left: 13%;
-    top: 3%;
-    width: 17%;
+    left: 5%;
+    top: 1%;
+    width: 13%;
     aspect-ratio: 1;
     background: var(--accent);
     border: 3px solid var(--black);
@@ -138,8 +136,8 @@
     animation: intro-float 3.2s ease-in-out infinite alternate;
 }
 
-.intro-dot-1 { left: 36%; top: 19%; width: 3%; animation-delay: 0.6s; }
-.intro-dot-2 { left: 31%; top: 14.5%; width: 4.2%; animation-delay: 0.3s; }
+.intro-dot-1 { left: 21.5%; top: 21%; width: 2.4%; animation-delay: 0.6s; }
+.intro-dot-2 { left: 18%; top: 15.5%; width: 3.4%; animation-delay: 0.3s; }
 
 @keyframes intro-idea-cycle {
     0%   { opacity: 0; transform: scale(0.9) rotate(-8deg); }
@@ -188,7 +186,7 @@
     }
 
     .intro-text {
-        margin-top: -1.5rem;
+        margin-top: 0.75rem;
     }
 
     .intro-buttons {
@@ -208,7 +206,6 @@
         animation-delay: 0s;
     }
 
-    .intro-layer-head,
     .intro-idea,
     .intro-dot {
         animation: none;
