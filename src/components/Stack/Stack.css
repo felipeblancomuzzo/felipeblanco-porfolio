@@ -105,3 +105,15 @@
     height: 3.25rem;
   }
 }
+
+/* Logos dentro de una tarjeta oscura */
+.theme-dark .stack-tool-icon {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--white);
+  box-shadow: 3px 3px 0 var(--white);
+}
+
+.theme-dark .stack-group p {
+  opacity: 0.75;
+}

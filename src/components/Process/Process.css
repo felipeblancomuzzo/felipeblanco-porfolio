@@ -1,0 +1,129 @@
+.process {
+  width: 100%;
+  padding: 5rem var(--page-x);
+  background: var(--paper);
+}
+
+.process-heading {
+  max-width: 50rem;
+  margin-bottom: 3rem;
+}
+
+.process-heading h2 {
+  font-size: clamp(2.2rem, 7vw, 3.2rem);
+  line-height: 0.95;
+  margin-bottom: 1rem;
+}
+
+.process-heading p {
+  font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+  font-weight: normal;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+.process-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* Línea punteada que une los pasos */
+.process-steps::before {
+  content: "";
+  position: absolute;
+  top: 1.75rem;
+  /* Va del centro del primer círculo al centro del último */
+  left: 1.75rem;
+  right: calc((100% - 4.5rem) / 4 - 1.75rem);
+  border-top: 3px dashed var(--black);
+  opacity: 0.35;
+}
+
+.process-steps li {
+  display: block;
+  position: relative;
+}
+
+.process-step {
+  height: 100%;
+}
+
+.process-step-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.process-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--accent);
+  border: 3px solid var(--black);
+  border-radius: 50%;
+  box-shadow: 3px 3px 0 var(--black);
+  font-size: 1.6rem;
+}
+
+.process-icon {
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.process-step h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.process-step p {
+  font-size: 1.1rem;
+  font-weight: normal;
+  line-height: 1.45;
+}
+
+/* Mobile: pasos uno debajo del otro, con la línea a la izquierda */
+@media (max-width: 900px) {
+  .process {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .process-steps::before {
+    top: 1rem;
+    bottom: 1rem;
+    left: 1.6rem;
+    right: auto;
+    border-top: none;
+    border-left: 3px dashed var(--black);
+  }
+
+  .process-step {
+    padding-left: 4.75rem;
+  }
+
+  .process-step-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+
+  .process-number {
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.4rem;
+  }
+}

@@ -66,14 +66,14 @@
   font-size: 2.6rem;
   line-height: 1;
   color: transparent;
-  -webkit-text-stroke: 1.5px var(--black);
+  -webkit-text-stroke: 1.5px currentColor;
   user-select: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .theme-dark .service-card:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 8px 8px 0 rgba(240, 240, 240, 0.4);
+    box-shadow: 8px 8px 0 var(--white);
   }
 }
 
@@ -105,4 +105,15 @@
   .service-card {
     padding: 1.4rem;
   }
+}
+
+/* Ícono amarillo dentro de una tarjeta oscura */
+.theme-dark .service-icon {
+  border-color: var(--white);
+  box-shadow: 4px 4px 0 var(--white);
+  color: var(--black);
+}
+
+.theme-dark .service-card p {
+  opacity: 0.85;
 }

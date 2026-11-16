@@ -22,7 +22,7 @@ const Experience = () => {
             <div className="timeline-body">
               <div className="timeline-heading">
                 <h3>{item.title}</h3>
-                <span className="timeline-period">{item.period}</span>
+                {item.period && <span className="timeline-period">{item.period}</span>}
               </div>
               <p className="timeline-place">{item.place}</p>
               <p>{item.description}</p>
