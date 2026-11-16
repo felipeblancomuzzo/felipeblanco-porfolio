@@ -14,11 +14,12 @@
 .timeline-marker span {
   display: inline-block;
   border: 3px solid var(--black);
-  background: var(--black);
-  color: var(--white);
+  background: var(--accent);
+  color: var(--black);
   padding: 0.4rem 1rem;
   font-size: 0.95rem;
   white-space: nowrap;
+  border-radius: 999px;
 }
 
 .timeline-body {
