@@ -1,3 +1,4 @@
+import Reveal from "../../components/Reveal/Reveal";
 import "./About.css";
 
 const About = () => {
@@ -12,7 +13,7 @@ const About = () => {
       </header>
 
       <section className="about-content">
-        <div className="about-text">
+        <Reveal className="about-text" from="left">
           <h2>Quién soy</h2>
           <p>
             Soy Felipe. Me gusta construir cosas que la gente usa todos los
@@ -27,14 +28,15 @@ const About = () => {
             primer cliente fue El Almacén Vinos &amp; Delicatessen, que hoy
             recibe pedidos desde su propia app.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="about-image-placeholder">
+        <Reveal className="about-image-placeholder" from="right" delay={100}>
           <span>🖼️ Espacio para ilustración: "estudiando / sobre mí"</span>
-        </div>
+        </Reveal>
       </section>
 
       <section className="about-stack">
+        <Reveal>
         <h2>Con qué trabajo</h2>
         <ul className="stack-list">
           <li>React</li>
@@ -44,6 +46,7 @@ const About = () => {
           <li>Node.js</li>
           <li>Git</li>
         </ul>
+        </Reveal>
       </section>
     </div>
   );

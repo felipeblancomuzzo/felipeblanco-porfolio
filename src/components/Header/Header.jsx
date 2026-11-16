@@ -7,7 +7,7 @@ const NAV_ITEMS = [
   { label: "Proyectos", path: "/projects" },
   { label: "Sobre mí", path: "/about" },
   { label: "Experiencia", path: "/experience" },
-  { label: "Contacto", path: "/contact" },
+  { label: "Contacto", path: "/contact", cta: true },
 ];
 
 const Header = () => {
@@ -45,11 +45,12 @@ const Header = () => {
           aria-label="Ir al inicio"
         >
           <img src={Avatar} alt="" />
+          <span className="header-name">Felipe Blanco</span>
         </button>
 
         <ul className="header-links" id="main-menu">
           {NAV_ITEMS.map((item, index) => (
-            <li key={item.path} style={{ "--i": index }}>
+            <li key={item.path} className={item.cta ? "is-cta" : ""} style={{ "--i": index }}>
               <button
                 type="button"
                 className={location.pathname === item.path ? "active" : ""}

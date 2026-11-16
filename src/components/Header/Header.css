@@ -42,10 +42,51 @@
   background-color: var(--white);
 }
 
+.header-name {
+  margin-left: 0.7rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
 /* === Links (desktop) === */
 .header-links {
+  flex: 1;
   height: 100%;
   display: flex;
+}
+
+/* "Contacto" va a la derecha, como botón destacado */
+@media (min-width: 821px) {
+  .header-links li.is-cta {
+    margin-left: auto;
+    align-items: center;
+    padding-right: 1rem;
+  }
+
+  .header-links li.is-cta button {
+    height: auto;
+    padding: 0.35rem 1.1rem;
+    font-size: 1.4rem;
+    background: var(--accent);
+    border: 3px solid var(--black);
+    border-radius: 999px;
+    box-shadow: 3px 3px 0 var(--black);
+    transition:
+      transform 160ms var(--ease-out),
+      box-shadow 160ms var(--ease-out);
+  }
+
+  .header-links li.is-cta button.active,
+  .header-links li.is-cta button:hover {
+    background: var(--accent);
+    color: var(--black);
+  }
+
+  .header-links li.is-cta button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--black);
+  }
 }
 
 .header-links li {
