@@ -6,13 +6,17 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: transform 0.15s ease;
+  transition:
+    transform 200ms var(--ease-out),
+    box-shadow 200ms var(--ease-out);
   border-radius: var(--radius);
 }
 
-.project-card:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 9px 9px 0 var(--black);
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 var(--black);
+  }
 }
 
 .project-card.featured {
@@ -122,7 +126,9 @@
   text-decoration: none;
 }
 
-.project-links a:hover {
-  color: var(--black);
-  opacity: 0.7;
+@media (hover: hover) and (pointer: fine) {
+  .project-links a:hover {
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 3px;
+  }
 }

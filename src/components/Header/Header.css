@@ -83,6 +83,11 @@
     color: var(--black);
   }
 
+  .header-links li.is-cta button:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 var(--black);
+  }
+
   .header-links li.is-cta button:active {
     transform: translate(2px, 2px);
     box-shadow: 1px 1px 0 var(--black);
@@ -111,8 +116,11 @@
 
 @media (hover: hover) and (pointer: fine) {
   .header-links button:hover {
+    background-color: rgba(25, 25, 25, 0.1);
+  }
+
+  .header-links button.active:hover {
     background-color: var(--black);
-    color: var(--white);
   }
 }
 

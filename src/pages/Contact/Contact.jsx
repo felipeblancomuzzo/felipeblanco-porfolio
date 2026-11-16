@@ -4,12 +4,12 @@ import Button from "../../components/Button/Button";
 import Reveal from "../../components/Reveal/Reveal";
 import "./Contact.css";
 
-// TODO Felipe: reemplazá estos valores con tus datos reales.
-// El número de WhatsApp va en formato internacional, sin "+" ni espacios (ej: 549291XXXXXXX).
-const WHATSAPP_NUMBER = "5491100000000";
-const CONTACT_EMAIL = "tu-email@ejemplo.com";
-const GITHUB_URL = "https://github.com/felipeblancomuzzo";
-const LINKEDIN_URL = "https://www.linkedin.com/in/tu-usuario";
+// WhatsApp en formato internacional, sin "+" ni espacios.
+// Para celulares de Argentina: 54 + 9 + código de área + número.
+const WHATSAPP_NUMBER = "5492926462675";
+const CONTACT_EMAIL = "felipeblanco114@gmail.com";
+const GITHUB_URL = "https://github.com/felipeblanco114";
+const LINKEDIN_URL = "https://www.linkedin.com/in/felipe-blanco-muzzolon/";
 
 const DIRECT_LINKS = [
   { label: "WhatsApp", icon: MessageCircle, href: `https://wa.me/${WHATSAPP_NUMBER}`, external: true },
