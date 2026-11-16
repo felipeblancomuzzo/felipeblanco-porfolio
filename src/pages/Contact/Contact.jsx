@@ -2,14 +2,8 @@ import { useState } from "react";
 import { MessageCircle, Mail, CodeXml, Briefcase, ArrowUpRight } from "lucide-react";
 import Button from "../../components/Button/Button";
 import Reveal from "../../components/Reveal/Reveal";
+import { WHATSAPP_NUMBER, CONTACT_EMAIL, GITHUB_URL, LINKEDIN_URL } from "../../data/contact";
 import "./Contact.css";
-
-// WhatsApp en formato internacional, sin "+" ni espacios.
-// Para celulares de Argentina: 54 + 9 + código de área + número.
-const WHATSAPP_NUMBER = "5492926462675";
-const CONTACT_EMAIL = "felipeblanco114@gmail.com";
-const GITHUB_URL = "https://github.com/felipeblanco114";
-const LINKEDIN_URL = "https://www.linkedin.com/in/felipe-blanco-muzzolon/";
 
 const DIRECT_LINKS = [
   { label: "WhatsApp", icon: MessageCircle, href: `https://wa.me/${WHATSAPP_NUMBER}`, external: true },
