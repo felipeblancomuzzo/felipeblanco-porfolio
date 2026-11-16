@@ -102,35 +102,29 @@
     margin-right: 0.75rem;
     width: 3rem;
     height: 3rem;
-    border: 3px solid var(--black);
-    background: var(--white);
-    box-shadow: 3px 3px 0 var(--black);
-    transition:
-      transform 160ms var(--ease-out),
-      box-shadow 160ms var(--ease-out);
+    transition: transform 160ms var(--ease-out);
   }
 
   .header-toggle:active {
-    transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0 var(--black);
+    transform: scale(0.9);
   }
 
   .header-toggle span {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 1.5rem;
-    height: 3px;
-    margin-left: -0.75rem;
-    margin-top: -1.5px;
+    width: 1.9rem;
+    height: 3.5px;
+    margin-left: -0.95rem;
+    margin-top: -1.75px;
     background: var(--black);
     transition:
       transform 250ms var(--ease-in-out),
       opacity 150ms ease;
   }
 
-  .header-toggle span:nth-child(1) { transform: translateY(-7px); }
-  .header-toggle span:nth-child(3) { transform: translateY(7px); }
+  .header-toggle span:nth-child(1) { transform: translateY(-9px); }
+  .header-toggle span:nth-child(3) { transform: translateY(9px); }
 
   .is-open .header-toggle span:nth-child(1) { transform: rotate(45deg); }
   .is-open .header-toggle span:nth-child(2) { opacity: 0; }

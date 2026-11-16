@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Introduction from "../../components/Introduction/Introduction";
 import Services from "../../components/Services/Services";
+import Marquee from "../../components/Marquee/Marquee";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import Button from "../../components/Button/Button";
 import data from "../../data/data.json";
@@ -14,10 +15,12 @@ const Home = () => {
   return (
     <main className='home-container'>
         <Introduction />
+        <Marquee />
         <Services />
 
         {featuredProject && (
           <section className="home-featured-project">
+            <span className="section-kicker">Portfolio</span>
             <h2>Un proyecto reciente</h2>
             <div className="home-featured-project-card">
               <ProjectCard {...featuredProject} />
