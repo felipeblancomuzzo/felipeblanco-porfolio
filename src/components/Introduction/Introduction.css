@@ -37,6 +37,17 @@
     font-size: 2.5rem;
     margin-top: 1.2rem;
 }
-.intro-button {
+.intro-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+
+/* Gana a ".introduction div", que fuerza columna y 80% de ancho */
+.introduction .intro-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
     margin-top: 2rem;
 }

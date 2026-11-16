@@ -13,3 +13,13 @@
   background: var(--black);
   color: var(--white);
 }
+
+.custom-button.button-secondary {
+  background: var(--black);
+  color: var(--white);
+}
+
+.custom-button.button-secondary:hover {
+  background: var(--grey);
+  color: var(--black);
+}
