@@ -1,11 +1,23 @@
+import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Lightbulb, ShoppingCart, CodeXml } from 'lucide-react';
-import Working from "../../img/working-png.png";
+import WorkingLoop from "../../img/working-loop.mp4";
+import WorkingPoster from "../../img/working-loop-poster.jpg";
 import Button from "../Button/Button";
 import "./Introduction.css";
 
 const Introduction = () => {
   const navigate = useNavigate();
+  const videoRef = useRef(null);
+
+  // Si la persona pidió "reducir movimiento", el video queda quieto en el primer cuadro.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) return;
+    video.play().catch(() => {}); // si el navegador bloquea el autoplay, queda la imagen fija
+  }, []);
 
   return (
     <section className='introduction'>
@@ -30,18 +42,23 @@ const Introduction = () => {
       </div>
 
       {/*
-        Ilustración animada: la misma imagen apilada 2 veces.
-        La copia de arriba está recortada con una máscara (solo la cabeza)
-        y se balancea apenas, como pensando.
+        Ilustración animada: video en loop (ida y vuelta, así no se nota el corte).
+        El video tiene fondo blanco; con mix-blend-mode: multiply el blanco
+        toma el color de fondo del sitio y no se ve ningún recuadro.
       */}
       <div className='intro-visual'>
         <div className='intro-figure'>
-          <img
-            className='intro-layer'
-            src={Working}
-            alt="Ilustración de Felipe trabajando en su notebook"
+          <video
+            ref={videoRef}
+            className='intro-video'
+            src={WorkingLoop}
+            poster={WorkingPoster}
+            loop
+            muted
+            playsInline
+            preload="auto"
+            aria-label="Ilustración animada de Felipe trabajando en su notebook"
           />
-          <img className='intro-layer intro-layer-head' src={Working} alt="" aria-hidden="true" />
 
           {/* Burbuja de ideas */}
           <span className='intro-dot intro-dot-1' aria-hidden="true" />
