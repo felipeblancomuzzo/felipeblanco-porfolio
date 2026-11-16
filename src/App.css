@@ -2,6 +2,19 @@
   --black: rgb(25,25,25);
   --grey: rgb(200,200,200);
   --white: rgb(240,240,240);
+
+  /* Curvas de animación */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+
+  /* Margen lateral de todas las secciones */
+  --page-x: 10%;
+}
+
+@media (max-width: 820px) {
+  :root {
+    --page-x: 1.25rem;
+  }
 }
 
 * {
@@ -44,7 +57,7 @@ html {
 }
 
 h1 {
-  font-size: 9rem;
+  font-size: clamp(3.5rem, 13vw, 9rem);
   font-weight: 900;
   line-height: 0.9;
 }
@@ -70,19 +83,35 @@ ul li {
 
 /* === Estilos compartidos entre páginas internas === */
 .page-header {
-    padding: 4rem 10% 2.5rem;
+    padding: 4rem var(--page-x) 2.5rem;
     border-bottom: 4px solid var(--black);
 }
 
 .page-header h1 {
-    font-size: 6rem;
+    font-size: clamp(3rem, 11vw, 6rem);
     line-height: 0.85;
     margin-bottom: 1rem;
 }
 
 .page-header p {
-    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 3.5vw, 1.4rem);
     font-weight: normal;
     max-width: 40rem;
     line-height: 1.4;
+}
+
+/* Marco oscuro más fino en celulares */
+@media (max-width: 820px) {
+  .background {
+    padding: 0.5rem;
+  }
+
+  .App {
+    margin-top: 0;
+  }
+
+  .page-header {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
 }

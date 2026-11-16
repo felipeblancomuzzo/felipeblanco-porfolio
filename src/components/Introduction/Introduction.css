@@ -1,53 +1,83 @@
 .introduction {
     display: flex;
-    justify-content: space-between; /* Distribuye espacio entre los divs */
-    align-items: center; /* Centra verticalmente los divs */
-    height: 82dvh;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    min-height: 82dvh;
     width: 100%;
+    padding: 3rem var(--page-x);
     border-bottom: 4px solid var(--black);
-    padding: 0 10%; /* Añade padding horizontal para separar de bordes */
 }
 
-.introduction div {
-    width: 80%; /* Ancho definido para cada columna */
+.intro-text {
+    flex: 1.4;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea el contenido a la izquierda */
-    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: flex-start;
 }
 
-.introduction div:first-child {
-    padding-right: 2rem; /* Espacio entre texto e imagen */
+.intro-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
-.introduction div h1,
-.introduction div p {
-    text-align: left; /* Alinea texto a la izquierda */
+.intro-text h1,
+.intro-text p {
     width: 100%;
-    margin: 0.5rem 0; /* Ajusta márgenes verticales */
+    margin: 0.5rem 0;
 }
 
-.introduction div h1 {
-    font-size: 9rem;
-    line-height: .8;
+.intro-text h1 {
+    font-size: clamp(3.5rem, 13vw, 9rem);
+    line-height: 0.8;
     user-select: none;
 }
 
-.introduction div p {
-    font-size: 2.5rem;
+.intro-text p {
+    font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+    line-height: 1.1;
     margin-top: 1.2rem;
 }
+
 .intro-subtitle {
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2.8vw, 1.3rem);
     opacity: 0.7;
     margin-top: 0.5rem;
 }
 
-/* Gana a ".introduction div", que fuerza columna y 80% de ancho */
-.introduction .intro-buttons {
-    flex-direction: row;
+.intro-buttons {
+    display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    width: 100%;
     margin-top: 2rem;
+}
+
+@media (max-width: 820px) {
+    .introduction {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 1rem;
+        min-height: auto;
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .intro-visual {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .intro-visual img {
+        width: 45%;
+        max-width: 11rem;
+    }
+
+    .intro-buttons {
+        width: 100%;
+    }
+
+    .intro-buttons > * {
+        flex: 1 1 auto;
+    }
 }
