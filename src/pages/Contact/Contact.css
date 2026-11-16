@@ -41,7 +41,7 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  box-shadow: 4px 4px 0 var(--accent), 4px 4px 0 2px var(--black);
+  box-shadow: 4px 4px 0 var(--black);
 }
 
 .contact-form button {

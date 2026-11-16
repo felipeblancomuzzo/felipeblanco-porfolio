@@ -72,17 +72,10 @@
   font-size: 1.1rem;
   display: inline-block;
   border-radius: 999px;
-  transition: background-color 200ms ease;
 }
 
 @media (max-width: 900px) {
   .about-content {
     flex-direction: column;
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .stack-list li:hover {
-    background: var(--accent);
   }
 }

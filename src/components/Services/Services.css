@@ -72,13 +72,8 @@
 
 @media (hover: hover) and (pointer: fine) {
   .service-card:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 9px 9px 0 var(--black);
-    background: var(--grey);
-  }
-
-  .service-card:hover .service-icon {
-    transform: rotate(-6deg);
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 var(--black);
   }
 }
 

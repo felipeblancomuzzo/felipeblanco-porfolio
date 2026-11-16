@@ -55,6 +55,11 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .footer-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 var(--white);
+  }
+
   .footer-button:hover svg {
     transform: translateX(4px);
   }
