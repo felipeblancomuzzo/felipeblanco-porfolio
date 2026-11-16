@@ -1,5 +1,8 @@
 import Reveal from "../../components/Reveal/Reveal";
 import Stack from "../../components/Stack/Stack";
+import LoopVideo from "../../components/LoopVideo/LoopVideo";
+import AboutLoop from "../../img/about-loop.mp4";
+import AboutPoster from "../../img/about-loop-poster.jpg";
 import "./About.css";
 
 const About = () => {
@@ -31,8 +34,12 @@ const About = () => {
           </p>
         </Reveal>
 
-        <Reveal className="about-image-placeholder" from="right" delay={100}>
-          <span>🖼️ Espacio para ilustración: "estudiando / sobre mí"</span>
+        <Reveal className="about-visual" from="right" delay={100}>
+          <LoopVideo
+            src={AboutLoop}
+            poster={AboutPoster}
+            label="Ilustración animada de Felipe pensando ideas frente a un pizarrón"
+          />
         </Reveal>
       </section>
 

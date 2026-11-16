@@ -6,7 +6,7 @@
 }
 
 .about-text {
-  flex: 1.2;
+  flex: 1;
 }
 
 .about-text h2 {
@@ -21,32 +21,11 @@
   margin-bottom: 1.2rem;
 }
 
-.about-image-placeholder {
-  flex: 1;
-  min-height: 20rem;
-  border: 4px solid var(--black);
-  background: repeating-linear-gradient(
-    45deg,
-    var(--white),
-    var(--white) 10px,
-    var(--grey) 10px,
-    var(--grey) 20px
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  text-align: center;
-  border-radius: var(--radius);
-}
-
-.about-image-placeholder span {
-  font-size: 0.95rem;
-  font-weight: normal;
-  background: var(--white);
-  padding: 0.4rem 0.7rem;
-  border: 2px dashed var(--black);
-  border-radius: var(--radius-sm);
+.about-visual {
+  flex: 1.15;
+  align-self: center;
+  width: 100%;
+  min-width: 0;
 }
 
 @media (max-width: 900px) {
