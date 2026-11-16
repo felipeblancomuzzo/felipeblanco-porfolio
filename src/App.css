@@ -2,6 +2,7 @@
   --black: rgb(25,25,25);
   --grey: rgb(200,200,200);
   --white: rgb(240,240,240);
+  --accent: rgb(255, 210, 63);
 
   /* Curvas de animación */
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
@@ -114,4 +115,36 @@ ul li {
     padding-top: 2.5rem;
     padding-bottom: 2rem;
   }
+}
+
+/* Etiqueta chica arriba de los títulos de sección */
+.section-kicker {
+  display: inline-block;
+  background: var(--black);
+  color: var(--white);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.7rem;
+  margin-bottom: 1rem;
+}
+
+/* Texto solo para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Foco visible al navegar con teclado */
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--black);
+  outline-offset: 3px;
 }
