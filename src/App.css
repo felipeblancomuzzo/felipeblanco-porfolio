@@ -165,8 +165,6 @@ a:focus-visible {
 /* Textos chicos: más livianos y sin apretar las letras, para que se lean bien */
 .text-small,
 .project-tags li,
-.project-links a,
-.project-link-disabled,
 .timeline-period,
 .timeline-place,
 .timeline-marker span,

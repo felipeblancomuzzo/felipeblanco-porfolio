@@ -11,10 +11,11 @@
         "Tailwind CSS",
         "Supabase"
       ],
-      "demoUrl": "",
+      "demoUrl": "https://haytaxi.vercel.app/",
       "repoUrl": "",
       "featured": true,
-      "image": "/projects/haytaxi.webp"
+      "image": "/projects/haytaxi.webp",
+      "demoNote": "Versión en desarrollo: algunas funciones todavía no están activas."
     },
     {
       "id": "el-almacen",
@@ -25,7 +26,7 @@
         "Vite",
         "Tailwind CSS"
       ],
-      "demoUrl": "",
+      "demoUrl": "https://el-almacen-psi.vercel.app/",
       "repoUrl": "",
       "featured": true,
       "image": "/projects/el-almacen.webp",
