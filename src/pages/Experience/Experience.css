@@ -5,6 +5,11 @@
   gap: 2rem;
 }
 
+.timeline-marker {
+  /* Ancho fijo: así todas las descripciones arrancan alineadas */
+  flex: 0 0 8.5rem;
+}
+
 .timeline-item {
   display: flex;
   gap: 1.5rem;
@@ -65,6 +70,10 @@
 }
 
 @media (max-width: 700px) {
+  .timeline-marker {
+    flex-basis: auto;
+  }
+
   .timeline-item {
     flex-direction: column;
     gap: 0.8rem;

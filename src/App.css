@@ -2,6 +2,7 @@
   --black: rgb(25,25,25);
   --grey: rgb(200,200,200);
   --white: rgb(240,240,240);
+  --paper: rgb(228,228,228);
   --accent: rgb(255, 210, 63);
 
   /* Bordes redondeados */
@@ -27,7 +28,19 @@
   font-weight: bold;
   /* En em: se ajusta al tamaño de la letra (antes -1px apretaba los textos chicos) */
   letter-spacing: -0.02em;
+}
+
+body {
   color: var(--black);
+}
+
+/* Botones, campos y links toman el color de su sección */
+button,
+input,
+textarea,
+select,
+a {
+  color: inherit;
 }
 html {
   box-sizing: border-box;
@@ -90,8 +103,8 @@ ul li {
 
 /* === Estilos compartidos entre páginas internas === */
 .page-header {
-    padding: 4rem var(--page-x) 2.5rem;
-    border-bottom: 4px solid var(--black);
+    padding: 4rem var(--page-x) 3rem;
+    background: var(--paper);
 }
 
 .page-header h1 {
@@ -198,5 +211,37 @@ a:focus-visible {
   .page-header h1 {
     animation: none;
     background-size: 100% 100%;
+  }
+}
+
+/* =============================================
+   Secciones oscuras: fondo negro y texto blanco.
+   Se alternan con las claras en lugar de usar rayas.
+   ============================================= */
+.theme-dark {
+  background: var(--black);
+  color: var(--white);
+}
+
+.theme-dark .section-kicker {
+  background: var(--accent);
+  color: var(--black);
+}
+
+/* Las tarjetas dentro de una sección oscura siguen siendo claras */
+.theme-dark .card-light {
+  color: var(--black);
+  box-shadow: 6px 6px 0 rgba(240, 240, 240, 0.28);
+}
+
+.theme-dark .custom-button {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--black);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .theme-dark .custom-button:hover {
+    box-shadow: 4px 4px 0 rgba(240, 240, 240, 0.35);
   }
 }

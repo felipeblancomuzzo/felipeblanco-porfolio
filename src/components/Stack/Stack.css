@@ -1,6 +1,5 @@
 .stack {
-  padding: 4rem var(--page-x);
-  background: var(--grey);
+  padding: 5rem var(--page-x);
 }
 
 .stack-heading h2 {
@@ -18,6 +17,7 @@
 }
 
 .stack-skills li {
+  color: var(--black);
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
