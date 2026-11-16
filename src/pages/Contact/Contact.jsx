@@ -19,7 +19,7 @@ const DIRECT_LINKS = [
 ];
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", contact: "", message: "" });
+  const [form, setForm] = useState({ name: "", message: "" });
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -28,10 +28,8 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const text =
-      `Hola Felipe! Soy ${form.name || "—"}.\n` +
-      `Contacto: ${form.contact || "—"}\n\n` +
-      `${form.message}`;
+    // El mensaje sale desde el WhatsApp de la persona, así que ya tenemos su número.
+    const text = `Hola Felipe! Soy ${form.name}.\n\n${form.message}`;
 
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank", "noopener,noreferrer");
@@ -58,17 +56,6 @@ const Contact = () => {
             value={form.name}
             onChange={handleChange}
             placeholder="¿Cómo te llamás?"
-            required
-          />
-
-          <label htmlFor="contact">Email o teléfono</label>
-          <input
-            id="contact"
-            name="contact"
-            type="text"
-            value={form.contact}
-            onChange={handleChange}
-            placeholder="Para poder responderte"
             required
           />
 
