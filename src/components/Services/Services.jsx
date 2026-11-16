@@ -39,7 +39,7 @@ const Services = () => {
       <div className="services-grid">
         {SERVICES.map(({ icon: Icon, title, text }, index) => (
           <Reveal key={title} delay={index * 90}>
-          <article className="service-card card-light">
+          <article className="service-card card-dark">
             <div className="service-card-top">
               <span className="service-icon" aria-hidden="true">
                 <Icon size={30} strokeWidth={2.25} />

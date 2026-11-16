@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import "./Header.css";
 import Avatar from "../../img/avatar-png.png";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
 
 const NAV_ITEMS = [
   { label: "Proyectos", path: "/projects" },
@@ -57,10 +58,22 @@ const Header = () => {
                 aria-current={location.pathname === item.path ? "page" : undefined}
                 onClick={() => goTo(item.path)}
               >
-                {item.label}
+                <span className="header-link-number" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="header-link-label">{item.label}</span>
+                {item.cta ? (
+                  <ArrowRight className="header-link-arrow" size={24} strokeWidth={2.5} aria-hidden="true" />
+                ) : (
+                  <ArrowUpRight className="header-link-arrow" size={24} strokeWidth={2.5} aria-hidden="true" />
+                )}
               </button>
             </li>
           ))}
+          <li className="header-menu-status" style={{ "--i": NAV_ITEMS.length }} aria-hidden="true">
+            <span className="header-status-dot" />
+            Disponible para nuevos proyectos
+          </li>
         </ul>
 
         <button

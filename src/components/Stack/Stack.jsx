@@ -79,7 +79,7 @@ const Stack = () => {
       <div className="stack-groups">
         {GROUPS.map((group, index) => (
           <Reveal key={group.title} delay={index * 90}>
-            <article className="stack-group card-light">
+            <article className="stack-group card-dark">
               <h3>{group.title}</h3>
               <p>{group.text}</p>
               <ul className="stack-tools">

@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import Introduction from "../../components/Introduction/Introduction";
 import Services from "../../components/Services/Services";
+import Process from "../../components/Process/Process";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import Button from "../../components/Button/Button";
 import Reveal from "../../components/Reveal/Reveal";
@@ -15,6 +16,7 @@ const Home = () => {
     <div className='home-container'>
         <Introduction />
         <Services />
+        <Process />
 
         {featuredProjects.length > 0 && (
           <section className="home-featured-project">

@@ -228,10 +228,12 @@ a:focus-visible {
   color: var(--black);
 }
 
-/* Las tarjetas dentro de una sección oscura siguen siendo claras */
-.theme-dark .card-light {
-  color: var(--black);
-  box-shadow: 6px 6px 0 rgba(240, 240, 240, 0.28);
+/* Tarjetas en secciones oscuras: borde y sombra blancos, como el botón del footer */
+.theme-dark .card-dark {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--white);
+  box-shadow: 6px 6px 0 var(--white);
 }
 
 .theme-dark .custom-button {
