@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Lightbulb, ShoppingCart, CodeXml } from 'lucide-react';
 import WorkingLoop from "../../img/working-loop.mp4";
 import WorkingPoster from "../../img/working-loop-poster.jpg";
 import Button from "../Button/Button";
@@ -59,15 +58,6 @@ const Introduction = () => {
             preload="auto"
             aria-label="Ilustración animada de Felipe trabajando en su notebook"
           />
-
-          {/* Burbuja de ideas */}
-          <span className='intro-dot intro-dot-1' aria-hidden="true" />
-          <span className='intro-dot intro-dot-2' aria-hidden="true" />
-          <div className='intro-idea' aria-hidden="true">
-            <Lightbulb className='intro-idea-icon' style={{ '--n': 0 }} strokeWidth={2.25} />
-            <ShoppingCart className='intro-idea-icon' style={{ '--n': 1 }} strokeWidth={2.25} />
-            <CodeXml className='intro-idea-icon' style={{ '--n': 2 }} strokeWidth={2.25} />
-          </div>
         </div>
       </div>
     </section>
