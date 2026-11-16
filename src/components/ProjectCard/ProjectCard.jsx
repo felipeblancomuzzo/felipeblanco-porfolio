@@ -1,12 +1,16 @@
 import PropTypes from "prop-types";
 import "./ProjectCard.css";
 
-const ProjectCard = ({ title, description, tags, demoUrl, repoUrl, featured }) => {
+const ProjectCard = ({ title, description, tags, demoUrl, repoUrl, featured, image }) => {
   return (
     <div className={`project-card ${featured ? "featured" : ""}`}>
-      <div className="project-image-placeholder">
-        <span>🖼️ Espacio para captura del proyecto</span>
-      </div>
+      {image ? (
+        <img className="project-image" src={image} alt={`Captura de ${title}`} loading="lazy" />
+      ) : (
+        <div className="project-image-placeholder">
+          <span>🖼️ Espacio para captura del proyecto</span>
+        </div>
+      )}
 
       <div className="project-body">
         <h3>{title}</h3>
@@ -44,6 +48,7 @@ ProjectCard.propTypes = {
   demoUrl: PropTypes.string,
   repoUrl: PropTypes.string,
   featured: PropTypes.bool,
+  image: PropTypes.string,
 };
 
 export default ProjectCard;

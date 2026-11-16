@@ -17,6 +17,15 @@
   background: var(--grey);
 }
 
+.project-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  border-bottom: 4px solid var(--black);
+}
+
 .project-image-placeholder {
   border-bottom: 4px solid var(--black);
   background: repeating-linear-gradient(
