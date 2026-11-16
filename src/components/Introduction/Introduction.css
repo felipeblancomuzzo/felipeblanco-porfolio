@@ -103,54 +103,6 @@
     mask-composite: intersect;
 }
 
-/* Burbuja de ideas: los íconos se turnan */
-.intro-idea {
-    position: absolute;
-    left: 5%;
-    top: 1%;
-    width: 13%;
-    aspect-ratio: 1;
-    background: var(--accent);
-    border: 3px solid var(--black);
-    border-radius: 50%;
-    box-shadow: 4px 4px 0 var(--black);
-    animation: intro-float 3.2s ease-in-out infinite alternate;
-}
-
-.intro-idea-icon {
-    position: absolute;
-    inset: 22%;
-    width: 56%;
-    height: 56%;
-    opacity: 0;
-    animation: intro-idea-cycle 9s var(--ease-in-out) infinite;
-    animation-delay: calc(var(--n) * 3s);
-}
-
-.intro-dot {
-    position: absolute;
-    background: var(--white);
-    border: 3px solid var(--black);
-    border-radius: 50%;
-    aspect-ratio: 1;
-    animation: intro-float 3.2s ease-in-out infinite alternate;
-}
-
-.intro-dot-1 { left: 21.5%; top: 21%; width: 2.4%; animation-delay: 0.6s; }
-.intro-dot-2 { left: 18%; top: 15.5%; width: 3.4%; animation-delay: 0.3s; }
-
-@keyframes intro-idea-cycle {
-    0%   { opacity: 0; transform: scale(0.9) rotate(-8deg); }
-    5%   { opacity: 1; transform: none; }
-    30%  { opacity: 1; transform: none; }
-    35%, 100% { opacity: 0; transform: scale(0.9) rotate(8deg); }
-}
-
-@keyframes intro-float {
-    from { transform: translateY(0); }
-    to   { transform: translateY(-0.5rem); }
-}
-
 /* ===== Entrada (solo al cargar) ===== */
 .intro-reveal {
     opacity: 0;
@@ -206,22 +158,9 @@
         animation-delay: 0s;
     }
 
-    .intro-idea,
-    .intro-dot {
-        animation: none;
-    }
-
-    .intro-idea-icon {
-        animation: none;
-    }
-
     .intro-text h1 mark {
         animation: none;
         background-size: 100% 100%;
-    }
-
-    .intro-idea-icon:first-child {
-        opacity: 1;
     }
 
     @keyframes intro-fade {
