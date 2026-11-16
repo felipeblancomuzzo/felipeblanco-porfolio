@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
+import WhatsAppButton from './WhatsAppButton/WhatsAppButton';
 
 const Layout = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const Layout = () => {
           <Outlet />
         </main>
         <Footer />
+        <WhatsAppButton scrollRef={appRef} />
       </div>
     </div>
   );
