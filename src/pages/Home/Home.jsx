@@ -9,22 +9,26 @@ import "./Home.css";
 
 const Home = () => {
   const navigate = useNavigate();
-  const featuredProject = data.projects.find((p) => p.featured);
+  const featuredProjects = data.projects.filter((p) => p.featured).slice(0, 3);
 
   return (
     <div className='home-container'>
         <Introduction />
         <Services />
 
-        {featuredProject && (
+        {featuredProjects.length > 0 && (
           <section className="home-featured-project">
             <Reveal from="left">
               <span className="section-kicker">Portfolio</span>
-              <h2>Un proyecto reciente</h2>
+              <h2>Proyectos recientes</h2>
             </Reveal>
-            <Reveal className="home-featured-project-card" delay={100}>
-              <ProjectCard {...featuredProject} />
-            </Reveal>
+            <div className="home-featured-grid">
+              {featuredProjects.map((project, index) => (
+                <Reveal key={project.id} delay={index * 90}>
+                  <ProjectCard {...project} />
+                </Reveal>
+              ))}
+            </div>
             <Reveal delay={150}>
               <Button onClick={() => navigate('/projects')} text="Ver todos los proyectos" />
             </Reveal>

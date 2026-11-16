@@ -1,9 +1,25 @@
 {
   "projects": [
     {
+      "id": "haytaxi",
+      "title": "HayTaxi",
+      "label": "En desarrollo",
+      "description": "Plataforma de taxis y remises para Coronel Suárez. El pasajero pide el viaje con direcciones reales, ve el precio estimado y sigue al chofer en vivo, sin operador telefónico de por medio.",
+      "tags": [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Supabase"
+      ],
+      "demoUrl": "",
+      "repoUrl": "",
+      "featured": true,
+      "image": "/projects/haytaxi.webp"
+    },
+    {
       "id": "el-almacen",
       "title": "El Almacén Vinos & Delicatessen",
-      "description": "App de pedidos mobile-first para un almacén gourmet. Catálogo con variantes de precio, carrito, y despacho del pedido directo por WhatsApp.",
+      "description": "App de pedidos mobile-first para un almacén gourmet de Coronel Suárez. Catálogo con variantes de precio, combos, horario de atención y despacho del pedido directo por WhatsApp.",
       "tags": [
         "React",
         "Vite",
@@ -12,7 +28,23 @@
       "demoUrl": "",
       "repoUrl": "",
       "featured": true,
-      "image": ""
+      "image": "/projects/el-almacen.webp",
+      "label": "Cliente real"
+    },
+    {
+      "id": "revelado",
+      "title": "Revelado",
+      "label": "Proyecto personal",
+      "description": "App web para darle a las fotos y videos del celular un look de película: filtros cinematográficos, grano, efectos, texto y recorte, con control de intensidad.",
+      "tags": [
+        "React",
+        "Edición de imagen",
+        "Mobile first"
+      ],
+      "demoUrl": "",
+      "repoUrl": "",
+      "featured": true,
+      "image": "/projects/revelado.webp"
     }
   ],
   "experience": [
