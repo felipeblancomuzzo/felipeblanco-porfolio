@@ -38,6 +38,7 @@
     transform 200ms var(--ease-out),
     box-shadow 200ms var(--ease-out),
     background-color 200ms ease;
+  border-radius: var(--radius);
 }
 
 .service-card-top {
@@ -57,6 +58,7 @@
   border: 3px solid var(--black);
   box-shadow: 4px 4px 0 var(--black);
   transition: transform 200ms var(--ease-out);
+  border-radius: var(--radius-sm);
 }
 
 .service-number {

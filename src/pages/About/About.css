@@ -38,6 +38,7 @@
   justify-content: center;
   padding: 1rem;
   text-align: center;
+  border-radius: var(--radius);
 }
 
 .about-image-placeholder span {
@@ -46,6 +47,7 @@
   background: var(--white);
   padding: 0.4rem 0.7rem;
   border: 2px dashed var(--black);
+  border-radius: var(--radius-sm);
 }
 
 .about-stack {
@@ -69,10 +71,18 @@
   padding: 0.6rem 1.2rem;
   font-size: 1.1rem;
   display: inline-block;
+  border-radius: 999px;
+  transition: background-color 200ms ease;
 }
 
 @media (max-width: 900px) {
   .about-content {
     flex-direction: column;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .stack-list li:hover {
+    background: var(--accent);
   }
 }

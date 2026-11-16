@@ -4,6 +4,10 @@
   --white: rgb(240,240,240);
   --accent: rgb(255, 210, 63);
 
+  /* Bordes redondeados */
+  --radius: 1.1rem;
+  --radius-sm: 0.7rem;
+
   /* Curvas de animación */
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
@@ -21,7 +25,8 @@
 * {
   font-family: "sztos-variable",sans-serif;
   font-weight: bold;
-  letter-spacing: -1px;
+  /* En em: se ajusta al tamaño de la letra (antes -1px apretaba los textos chicos) */
+  letter-spacing: -0.02em;
   color: var(--black);
 }
 html {
@@ -89,9 +94,12 @@ ul li {
 }
 
 .page-header h1 {
+    display: table;
     font-size: clamp(3rem, 11vw, 6rem);
     line-height: 0.85;
     margin-bottom: 1rem;
+    /* Subrayado tipo resaltador, igual que en el inicio */
+    background: linear-gradient(transparent 68%, var(--accent) 68%, var(--accent) 92%, transparent 92%);
 }
 
 .page-header p {
@@ -125,8 +133,10 @@ ul li {
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 0.3rem 0.7rem;
   margin-bottom: 1rem;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-weight: 500;
 }
 
 /* Texto solo para lectores de pantalla */
@@ -147,4 +157,20 @@ button:focus-visible,
 a:focus-visible {
   outline: 3px solid var(--black);
   outline-offset: 3px;
+}
+
+/* Textos chicos: más livianos y sin apretar las letras, para que se lean bien */
+.text-small,
+.project-tags li,
+.project-links a,
+.project-link-disabled,
+.timeline-period,
+.timeline-place,
+.timeline-marker span,
+.stack-list li,
+.footer-bottom,
+.contact-form label,
+.contact-links a {
+  font-weight: 500;
+  letter-spacing: 0;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Introduction from "../../components/Introduction/Introduction";
 import Services from "../../components/Services/Services";
-import Marquee from "../../components/Marquee/Marquee";
+import Highlights from "../../components/Highlights/Highlights";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import Button from "../../components/Button/Button";
 import data from "../../data/data.json";
@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <main className='home-container'>
         <Introduction />
-        <Marquee />
+        <Highlights />
         <Services />
 
         {featuredProject && (

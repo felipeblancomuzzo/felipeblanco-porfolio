@@ -30,12 +30,15 @@
   font-family: inherit;
   color: var(--black);
   resize: vertical;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0;
+  transition: box-shadow 160ms var(--ease-out);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  box-shadow: 4px 4px 0 var(--black);
+  box-shadow: 4px 4px 0 var(--accent), 4px 4px 0 2px var(--black);
 }
 
 .contact-form button {
