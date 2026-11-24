@@ -185,6 +185,27 @@
   transform: scale(0.97);
 }
 
+.project-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--white);
+  color: var(--black);
+  border: 3px solid var(--black);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  font: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition:
+    transform 160ms var(--ease-out),
+    box-shadow 160ms var(--ease-out);
+}
+
+.project-demo:active {
+  transform: scale(0.97);
+}
+
 .project-repo {
   display: inline-flex;
   align-items: center;
@@ -211,6 +232,11 @@
 
 @media (hover: hover) and (pointer: fine) {
   .project-visit:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 var(--black);
+  }
+
+  .project-demo:hover {
     transform: translate(-2px, -2px);
     box-shadow: 4px 4px 0 var(--black);
   }

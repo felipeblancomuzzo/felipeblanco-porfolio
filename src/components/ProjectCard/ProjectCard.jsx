@@ -1,8 +1,13 @@
+import { useCallback, useState } from "react";
 import PropTypes from "prop-types";
-import { ArrowUpRight, CodeXml } from "lucide-react";
+import { ArrowUpRight, CodeXml, Play } from "lucide-react";
+import VideoModal from "../VideoModal/VideoModal";
 import "./ProjectCard.css";
 
-const ProjectCard = ({ title, description, tags, demoUrl, repoUrl, featured, image, label, demoNote }) => {
+const ProjectCard = ({ title, description, tags, demoUrl, repoUrl, featured, image, label, demoNote, videoUrl, videoPoster }) => {
+  const [videoOpen, setVideoOpen] = useState(false);
+  const closeVideo = useCallback(() => setVideoOpen(false), []);
+
   return (
     <div className={`project-card ${featured ? "featured" : ""}`}>
       {image ? (
@@ -41,6 +46,12 @@ const ProjectCard = ({ title, description, tags, demoUrl, repoUrl, featured, ima
           ) : (
             <span className="project-link-disabled">Próximamente online</span>
           )}
+          {videoUrl && (
+            <button type="button" className="project-demo" onClick={() => setVideoOpen(true)}>
+              <Play size={18} strokeWidth={2.5} aria-hidden="true" />
+              Ver demo
+            </button>
+          )}
           {repoUrl && (
             <a className="project-repo" href={repoUrl} target="_blank" rel="noreferrer">
               <CodeXml size={18} strokeWidth={2.5} aria-hidden="true" />
@@ -49,6 +60,16 @@ const ProjectCard = ({ title, description, tags, demoUrl, repoUrl, featured, ima
           )}
         </div>
       </div>
+
+      {videoUrl && (
+        <VideoModal
+          open={videoOpen}
+          onClose={closeVideo}
+          src={videoUrl}
+          poster={videoPoster}
+          title={`Demo de ${title}`}
+        />
+      )}
     </div>
   );
 };
@@ -63,6 +84,8 @@ ProjectCard.propTypes = {
   image: PropTypes.string,
   label: PropTypes.string,
   demoNote: PropTypes.string,
+  videoUrl: PropTypes.string,
+  videoPoster: PropTypes.string,
 };
 
 export default ProjectCard;
